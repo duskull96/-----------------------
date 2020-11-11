@@ -1,0 +1,92 @@
+html, body {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+h1 {
+  margin: 20px 0 20px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.contain {
+  width: 100%;
+  margin: 20px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contain .menu {
+  width: 20%;
+  margin: 0 0 0 50px;
+}
+
+.contain .menu .__notification {
+  margin: 20px 0 0 0;
+}
+
+.contain .menu form .col {
+  padding: 0;
+}
+
+.contain .menu form .input-field.col label {
+  left: 0;
+}
+
+.contain .menu form .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contain canvas {
+  margin: 0 auto;
+  outline: 1px solid black;
+}
+
+.small-devices {
+  display: none;
+}
+
+@media (max-width: 1900px) {
+  body h1 {
+    font-size: 30px;
+  }
+  .contain {
+    display: none;
+  }
+  .small-devices {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
