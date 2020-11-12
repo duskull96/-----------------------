@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Треугольник Серпинского</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="script.js" defer></script>
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+            
+        });
+    </script>
 
 </head>
 
@@ -21,10 +28,13 @@
             </div>
             <div class="__notification">
                 <p>Нарисуйте три вершины треугольника на холтсе</p>
-                <p>После нажатия кноки "Отрисовать", создается точка на середине растояния от прошлой точки до одной из трех вершин.</p>
-                <p>Создав множество точек, проявится рисунок. Рекомендуемое количество точек для отрисовки 100 - 1000</p>
+                <p>После нажатия кноки "Отрисовать", создается точка на середине растояния от прошлой точки до одной из
+                    трех вершин.</p>
+                <p>Создав множество точек, проявится рисунок. Рекомендуемое количество точек для отрисовки 100 - 1000
+                </p>
+                <p>Чем меньше размер точки, тем чётче получится рисунок.</p>
             </div>
-            <form class="controls">
+            <form class="controls" action="#">
                 <div class="row">
                     <div class="input-field col s12">
                         <input value='' id="first_name2" type="text" class="count-dots validate">
@@ -33,6 +43,16 @@
                             <a id='draw-pic' class="waves-effect waves-light btn-small disabled">Отрисовать</a>
                             <a id='delete-def' class="waves-effect waves-light btn-small disabled">Удалить вершины</a>
                         </div>
+                    </div>
+                    <div class="input-field col s12">
+                        <select>
+                            <option value="1">5x5</option>
+                            <option value="2">4x4</option>
+                            <option value="3">3x3</option>
+                            <option value="4">2x2</option>
+                            <option value="5">1x1</option>
+                        </select>
+                        <label>Размер точки</label>
                     </div>
                 </div>
             </form>
