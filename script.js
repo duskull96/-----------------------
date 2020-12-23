@@ -22,7 +22,6 @@ let x = 700, y = 300;
 canvas.onclick = function (event) {
     let defPos = getCoords(event);
     pos.fillStyle = 'red'
-    console.log(defPos);
     if (def.length < 3) {
         btnDeleteDef.classList.remove('disabled')
         if (def.length == 2) {
@@ -57,10 +56,9 @@ function startDraw() {
     let countDots = document.querySelector('.count-dots').value;
     $('select').formSelect();
     let posSizeIndex = Number($('select').formSelect('getSelectedValues').join())
-    // console.log(countDots, posSize[posSizeIndex-1]);
     for (let i = 0; i < countDots; i++) {
         let index = rndInt(0, def.length - 1)
-        // console.log(x, y, index);
+        
         dot.fillStyle = 'black';
         dot.fillRect(x, y, posSize[posSizeIndex-1], posSize[posSizeIndex-1])
         x < def[index].x ? x = (Math.abs(x - def[index].x) / 2) + x :
@@ -68,7 +66,7 @@ function startDraw() {
 
         y < def[index].y ? y = (Math.abs(y - def[index].y) / 2) + y :
             y = (Math.abs(y - def[index].y) / 2) + def[index].y
-        // console.log(x, y);
+       
     }
 }
 
